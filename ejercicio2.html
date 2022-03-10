@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var arreglo = [];
+        var valor;
+        var cantidad;
+        var i = 1;
+        var mayor;
+
+        cantidad = prompt('ATENCIÓN: Ingrese la cantidad de elemtos que luego ingresará'); //Ingreso la cantidad de elementos del arreglo
+        
+        //Se ingresan los elemtos del arreglo en la última posición
+        while (i <= cantidad) {
+            valor = prompt('Ingrese el valor ' + i + ' :');
+            arreglo.push(parseInt(valor));
+            i = i + 1;
+        }
+
+        mayor = arreglo[0]; //Se le asigna a mayor el primer elemento
+
+        document.write('Los números del arreglo son: ' + "<br/>")
+
+        //Recorro el arreglo y, si el elemto en la posición i es mayor que el que estaba guardado en mayor lo reemplaza por este
+        //Además escribo los elementos del arreglo en el documento
+
+        for (i=0; i<=(arreglo.length - 1); i++){
+            if (arreglo[i] > mayor){
+                mayor = arreglo[i];
+            }
+            document.write('[' + arreglo[i] + '] ');
+        }
+
+        document.write('<br/>' + 'El mayor número del arreglo es: ' + mayor); //Escribo el mayor
+
+    </script>
+</body>
+
+</html>

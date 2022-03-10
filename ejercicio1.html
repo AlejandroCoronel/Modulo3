@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var valor;
+        valor = prompt('Ingrese la distancia en km');
+
+        valor = parseInt(valor);
+
+        if ((Number.isInteger(valor)) && (valor >= 0)) { //Agrego validación para el tipo de dato ingresado
+
+            if (valor >= 0 && valor <= 1000) {
+                document.write('Debes ir a pie');
+            } else {
+                if (valor >= 1001 && valor <= 10000) {
+                    document.write('Debes ir en bicicleta');
+                } else {
+                    if (valor >= 10001 && valor <= 30000) {
+                        document.write('Debes ir en colectivo');
+                    } else {
+                        if (valor >= 30001 && valor <= 100000) {
+                            document.write('Debes ir en auto');
+                        } else {
+                            document.write('Debes ir en avión');
+                        }
+                    }
+                }
+            }
+        } else {
+            document.write('Ud ingesó un valor negativo o bien un dato no numérico, recargue la página y vuelva a intentarlo');
+        }
+    </script>
+</body>
+
+</html>
