@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="ejercicio1_m3_u4.css">
+</head>
+<body id="cuerpo">
+	<div class="cuadrado primero" id="color1">
+        Primero
+    </div>
+    <div class="cuadrado segundo" id="color2">
+        Segundo
+    </div>
+    <div class="cuadrado tercero" id="color3">
+        Tercero
+    </div>
+    <script>
+        var cuerpo = document.getElementById('cuerpo');
+        var cuadrado1 = document.getElementById('color1');
+        var cuadrado2 = document.getElementById('color2');
+        var cuadrado3 = document.getElementById('color3');
+
+        cuadrado1.addEventListener('click', function(){
+            cuerpo.classList.remove('primero', 'segundo', 'tercero');
+            cuerpo.classList.add('primero')
+        })
+        cuadrado2.addEventListener('click', function(){
+            cuerpo.classList.remove('primero', 'segundo', 'tercero');
+            cuerpo.classList.add('segundo')
+        })
+        cuadrado3.addEventListener('click', function(){
+            cuerpo.classList.remove('primero', 'segundo', 'tercero');
+            cuerpo.classList.add('tercero')
+        })
+
+
+
+    </script>
+</body>
+</html>
